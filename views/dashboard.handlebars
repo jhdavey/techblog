@@ -1,23 +1,32 @@
 {{#if posts.length}}
 <section>
-    <div class="row align-items-center">
+    <div class="d-flex justify-content-center align-items-cene">
         <h2>Hello, {{username}}!</h2>
-        <p>Please click on the post title to edit it!</p>
     </div>
-    <br>
+
+    <div class="text-center">
+        <h3>Your Posts</h3>
+    </div>
+
     {{#each posts as |post|}}
-    <input type="hidden" name="post-id" value="{{post.id}}"/>
-        <div class="card">
+    <input type="hidden" name="post-id" value="{{post.id}}"/> 
+        <div class="card col-6 mx-auto text-center">
             <div class="card-header">
                 <h4><a class="link" href="/dashboard/edit/{{id}}">{{title}}</a></h4>
             </div>
-            <button class="btn" id="edit-post-btn"><i href="/dashboard/edit/{{id}}"></i>Edit Post</button>                           
-            <button class="btn btn-danger" id="del-post-btn" ><i class="bi bi-trash"></i>Delete Post</button>                          
+            <button class="btn btn-danger" id="del-post-btn"><i class="bi bi-trash"></i>Delete Post</button>                          
         </div>
     {{/each}}
     
 </section>
 {{/if}}
-<button type="submit" class="btn"><a href="/dashboard/new"><i class="bi bi-plus-square"></i>Add New Post</a></button>
+
+<div class="mx-auto text-center">
+    <button type="submit" class="btn btn-info col-6">
+        <a class="text-decoration-none text-reset" href="/dashboard/new">
+        Add New Post
+        </a>
+    </button>
+</div>
 
 <script src="js/deletepost.js"></script>
