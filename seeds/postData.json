@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Music of 2023",
+      "content": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+      "userId": 1
+    },
+    {
+      "title": "This is another seed post",
+      "content": "We are testing this amazing tech blog.",
+      "userId": 1
+    },
+    {
+      "title": "And yet another test",
+      "content": "lorum ipsum bs goes in here!",
+      "userId": 2
+    }
+  ]
+  

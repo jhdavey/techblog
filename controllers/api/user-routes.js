@@ -8,6 +8,7 @@ router.post('/', async (req, res) => {
         const dbUserData = await User.create(req.body);
         req.session.save(() => {
             req.session.userId = dbUserData.id;
+            req.session.email = dbUSerData.email;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
             res.status(201).json({ message: `Account created for ${dbUserData.username}`});
@@ -36,6 +37,7 @@ router.post('/login', async (req, res) => {
         // create session and send response back
         req.session.save(() => {
             req.session.userId = dbUserData.id;
+            req.session.email = dbUserData.email;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;        
         //send response to client
