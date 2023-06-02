@@ -6,15 +6,15 @@ const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 const routes = require('./controllers');
 
+// Bring in connection file for sequelize DB, and setup sequelize session storage
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 // Create instance of express
 const app = express();
 
 // Use process.env port, or default to 3001
 const PORT = process.env.PORT || 3001;
-
-// Bring in connection file for sequelize DB, and setup sequelize session storage
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Create session
 const sess = {
