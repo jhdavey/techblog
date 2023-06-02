@@ -10,9 +10,11 @@
         <div class="card-body comment">
                 {{> commentcard post.comments}}
         </div>
+        {{#unless loggedIn}}
         <div class="text-end mx-1">
             <p>Please log in to leave comments</p>
         </div>
+        {{/unless}}
 
     </div>
 </div> 

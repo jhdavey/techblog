@@ -1,19 +1,19 @@
-<div class="card">
+<div class="card m-auto my-2 col-6">
     <h2 class="card-header">Edit Your Post</h2>
     <form class="card-body edit-form">
 
       <div class="form-group">
         <label class="form-label">Title:</label>
-        <input type="text" class="form-input" name="post-title" value="{{post.title}}"/>
+        <input type="text" class="form-input col-9" name="post-title" value="{{post.title}}"/>
       </div>
 
       <div class="form-group">
         <label class="form-label">Content:</label>
-        <textarea class="form-textarea form-input" name="post-content">{{post.content}}</textarea>
+        <textarea class="form-textarea form-input col-12 post-content" name="post-content">{{post.content}}</textarea>
       </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary"><i class="bi bi-pencil"></i>Edit Post</button>
+        <button type="submit" class="btn btn-primary float-end"><i class="bi bi-pencil"></i>Edit Post</button>
       </div>
 
     </form>
